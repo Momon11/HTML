@@ -1,23 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <section id="container" style="display: flex; height: 100vh;">
-      <section id="navigation" style="background-color: gray; width: 15%;">
-        <h1>Connect</h1>
-        <div>
-          <button>Users</button>
-          <button>Rules</button>
-          <button>Logout</button>
+<head>
+  <meta charset="UTF-8">
+  <title>Connect - User Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 150px;
+      background: #f4f4f4;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Tengah horizontal */
+    }
+
+    .sidebar h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      width: 100%;
+    }
+
+    .sidebar a:hover {
+      color: #007BFF;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .search-box input {
+      width: 98%;
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .user-card {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .user-info {
+      flex-grow: 1;
+    }
+
+    .user-info h4 {
+      margin: 0;
+    }
+
+    .user-info p {
+      margin: 2px 0;
+      color: gray;
+    }
+
+    .tags {
+      display: flex;
+      gap: 5px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      background-color: black;
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .status {
+      font-weight: bold;
+    }
+
+
+    .add-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ddd;
+      padding: 10px 14px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Connect</h2>
+    <a href="#">👤 User</a>
+    <a href="#">🔑 Hak Akses</a>
+    <a href="#">🚪 Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="search-box">
+      <input type="text" placeholder="Cari user">
+    </div>
+
+    <!-- User 1 -->
+    <div class="user-card">
+      <div class="user-info">
+        <h4>Rahmat Saudi Al Fathir As</h4>
+        <p>rahmatsaudi@universitasmulia.ac.id</p>
+        <div class="tags">
+          <div class="tag">Admin</div>
+          <div class="tag">Employee</div>
         </div>
-      </section>
-      <section id="content" style="background-color: orange; width: 85%;">
-        <input placeholder="Cari User"/>
-      </section>
-    </section>
-  </body>
+      </div>
+      <div class="status">Aktif</div>
+    </div>
+
+    <!-- User 2 -->
+    <div class="user-card">
+      <div class="user-info">
+        <h4>Lintang</h4>
+        <p>lintang@universitasmulia.ac.id</p>
+        <div class="tags">
+          <div class="tag">Employee</div>
+        </div>
+      </div>
+      <div class="status">Aktif</div>
+    </div>
+
+    <!-- User 3 -->
+    <div class="user-card">
+      <div class="user-info">
+        <h4>Shafira</h4>
+        <p>shafira@universitasmulia.ac.id</p>
+        <div class="tags">
+          <div class="tag">Employee</div>
+        </div>
+      </div>
+      <div class="status">Aktif</div>
+    </div>
+
+    <!-- User 4 -->
+    <div class="user-card">
+      <div class="user-info">
+        <h4>Lebah Ganteng</h4>
+        <p>lebahganteng@universitasmulia.ac.id</p>
+        <div class="tags">
+          <div class="tag">Employee</div>
+        </div>
+      </div>
+      <div class="status suspended">Suspended</div>
+    </div>
+
+    <button class="add-button">+</button>
+  </div>
+</body>
 </html>
+
